@@ -6,5 +6,14 @@ document.addEventListener("DOMContentLoaded", function () {
   toggle.addEventListener("click", function () {
     menu.classList.toggle("show");
   });
+  // LOADER
+
+window.addEventListener("load", function () {
+
+  const loader = document.getElementById("loader");
+
+  loader.classList.add("loader-hidden");
+
+});
 
 });
