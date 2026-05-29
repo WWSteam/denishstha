@@ -26,6 +26,7 @@
  <nav class="main-nav">
   <div class="container nav-content">
     
+    
 
     <div class="logo">
       <a href="index.html"><img src="shrestha3.png" alt="logo"></a>
@@ -35,10 +36,11 @@
       </div>
     </div>
 
-    <!-- HAMBURGER -->
     <div class="menu-toggle" id="menu-toggle">
-      ☰
-    </div>
+  <span></span>
+  <span></span>
+  <span></span>
+</div>
 
     <!-- MENU -->
     <ul class="menu" id="nav-menu">
@@ -57,7 +59,7 @@
 
    <section class="hero">
   <div class="hero-text">
-    <h1>WELCOME SHRESTHA METAL WORKS</h1>
+    <h1>WELCOME TO SHRESTHA METAL WORKS</h1>
   </div>
 </section>
 
@@ -261,5 +263,21 @@
     </footer>
 
 <script src="script.js"></script>
+<script>
+  const menuToggle = document.getElementById("menu-toggle");
+  const menu = document.getElementById("menu");
+
+  // OPEN CLOSE MENU
+  menuToggle.addEventListener("click", () => {
+    menu.classList.toggle("show");
+  });
+
+  // AUTO CLOSE WHEN CLICKING MENU ITEM
+  document.querySelectorAll(".menu a").forEach(link => {
+    link.addEventListener("click", () => {
+      menu.classList.remove("show");
+    });
+  });
+</script>
 </body>
 </html>
